@@ -247,7 +247,7 @@ class IntlPhoneField extends StatefulWidget {
   final bool disableAutoFillHints;
 
   /// If null, default magnification configuration will be used.
-  final TextMagnifierConfiguration? magnifierConfiguration;
+  // final TextMagnifierConfiguration? magnifierConfiguration;
 
   const IntlPhoneField({
     Key? key,
@@ -295,7 +295,7 @@ class IntlPhoneField extends StatefulWidget {
     this.showCursor = true,
     this.pickerDialogStyle,
     this.flagsButtonMargin = EdgeInsets.zero,
-    this.magnifierConfiguration,
+    // this.magnifierConfiguration,
   }) : super(key: key);
 
   @override
@@ -398,7 +398,7 @@ class _IntlPhoneFieldState extends State<IntlPhoneField> {
       cursorWidth: widget.cursorWidth,
       showCursor: widget.showCursor,
       onFieldSubmitted: widget.onSubmitted,
-      magnifierConfiguration: widget.magnifierConfiguration,
+      // magnifierConfiguration: widget.magnifierConfiguration,
       decoration: widget.decoration.copyWith(
         prefixIcon: _buildFlagsButton(),
         counterText: !widget.enabled ? '' : null,
