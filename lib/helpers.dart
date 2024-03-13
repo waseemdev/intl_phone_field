@@ -18,7 +18,7 @@ extension CountryExtensions on List<Country> {
     search = removeDiacritics(search.toLowerCase());
     return where(
       (country) => isNumeric(search) || search.startsWith("+")
-          ? country.dialCode.contains(search)
+          ? country.dialCode.contains(search.replaceAll("+", ""))
           : removeDiacritics(country.name.replaceAll("+", "").toLowerCase()).contains(search) ||
               country.nameTranslations.values
                   .any((element) => removeDiacritics(element.toLowerCase()).contains(search)),
